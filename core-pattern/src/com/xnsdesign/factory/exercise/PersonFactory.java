@@ -2,15 +2,13 @@ package com.xnsdesign.factory.exercise;
 
 public class PersonFactory {
 
-    public static String createWish(String typePerson, String wish) {
-        String wishMsg = "";
+    public static Person createPerson(String typePerson) {
+        Person person = null;
         if (typePerson.equals("male")) {
-            Person person = new Male();
-            wishMsg = person.wish(wish);
+            person = new Male();
         } else if (typePerson.equals("female")) {
-            Person person = new Female();
-            wishMsg = person.wish(wish);
+            person = new Female();;
         }
-        return wishMsg;
+        return person;
     }
 }

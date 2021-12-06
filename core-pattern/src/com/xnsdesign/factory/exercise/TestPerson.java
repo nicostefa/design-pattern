@@ -5,12 +5,11 @@ public class TestPerson {
     public static void main(String[] args) {
         System.out.println("Start Test Exercise Factory - Person wish");
 
-        PersonWish personWish = new PersonWish();
-        String msgMale = personWish.wishPerson("male", "car");
-        String msgFemale = personWish.wishPerson("female", "dress");
+        Person male = PersonFactory.createPerson("male");
+        Person female = PersonFactory.createPerson("female");
 
-        System.out.println(msgMale);
-        System.out.println(msgFemale);
+        System.out.println(male.wish("car"));
+        System.out.println(female.wish("dress"));
 
         System.out.println("End Test Exercise Factory - Person wish");
     }
