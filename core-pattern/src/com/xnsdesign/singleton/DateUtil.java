@@ -21,6 +21,7 @@ public class DateUtil implements Serializable, Cloneable {
         return instance;
     }
 
+    // Use for enforcing read of stream and use serializable correctly -> deserializing
     protected Object readResolve() {
         return instance;
     }
